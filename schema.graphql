@@ -1,0 +1,23 @@
+type Cliente {
+  id: ID!
+  nombre: String!
+  sector: String!
+  facturas: [Factura!]!
+}
+
+type ClienteOptimizado {
+  id: ID!
+  nombre: String!
+  sector: String!
+  facturas: [Factura!]!
+}
+
+type Factura {
+  id: ID!
+  monto: Float!
+}
+
+type Query {
+  clientes: [Cliente!]!
+  clientesOptimizados: [ClienteOptimizado!]!
+}
